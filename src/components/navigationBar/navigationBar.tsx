@@ -6,7 +6,7 @@ import { content } from "../../content/content"
 const NavigationBar: React.FC = () => {
   return (
     <AppBar position="static" sx={{ bgcolor: '#F6832A' }}>
-      <Toolbar>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
         <IconButton
           size="large"
           edge="start"
@@ -16,13 +16,15 @@ const NavigationBar: React.FC = () => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: "'Press Start 2P', system-ui", color: "white" }}>
+        <Typography variant="h6" component="div" sx={{ fontFamily: "'Press Start 2P', system-ui", color: "white", marginLeft: '205px' }}>
           {content.navigationBarSection.mainTitle}
         </Typography>
-        <Button color="inherit" href="#home">Home</Button>
-        <Button color="inherit" href="#contact">Contact Us</Button>
-        <Button color="inherit" href="#pricing">Pricing</Button>
-        <Button color="inherit" href="#about">About Us</Button>
+        <div> {/* Added a div to contain the buttons */}
+          <Button color="inherit" href="#home">Home</Button>
+          <Button color="inherit" href="#contact">Contact Us</Button>
+          <Button color="inherit" href="#pricing">Pricing</Button>
+          <Button color="inherit" href="#about">About Us</Button>
+        </div>
       </Toolbar>
     </AppBar>
   );

@@ -4,34 +4,47 @@ import { content } from "../../content/content";
 
 const PricingSection: React.FC = () => {
   return (
-    <Grid container spacing={2} sx={{ pb: 6 }}>
-      {content.pricingSection.services.map((service, index) => (
-        <Grid item key={index} xs={12} sm={6} md={4}>
-          <PricingCard service={service} />
-        </Grid>
-      ))}
-    </Grid>
+    <Box
+      sx={{
+        backgroundImage: `url(${content.pricingSection.servicesBackgroundImage})`, // Replace '/path/to/backgroundImage.jpg' with your actual image path
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "600px", // Increase the minHeight to make it bigger
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "white",
+        textAlign: "center",
+        padding: "50px",
+      }}
+    >
+      <Grid container spacing={2}>
+        {content.pricingSection.services.map((service, index) => (
+          <Grid item key={index} xs={12} sm={6} md={4}>
+            <PricingCard service={service} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
 const PricingCard: React.FC<{ service: any }> = ({ service }) => {
   return (
-    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <Card>
       <CardMedia
         component="img"
         height="200"
         image={service.serviceImage}
         alt={service.serviceTitle}
       />
-      <CardContent sx={{ flex: "1 0 auto" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-          <Typography variant="h5" component="div" gutterBottom>
-            {service.serviceTitle}
-          </Typography>
-          <Typography variant="body2" color="textSecondary">
-            {service.content}
-          </Typography>
-        </Box>
+      <CardContent>
+        <Typography variant="h5" component="div" gutterBottom>
+          {service.serviceTitle}
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          {service.content}
+        </Typography>
       </CardContent>
     </Card>
   );

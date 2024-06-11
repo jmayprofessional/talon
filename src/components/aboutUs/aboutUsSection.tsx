@@ -4,7 +4,7 @@ import { content } from "../../content/content"
 
 const AboutUsSection: React.FC = () => {
   return (
-    <Grid container spacing={6} sx={{pb: 6 }}>
+    <Grid container spacing={6} sx={{pb: 6, pt: 6 }}>
       <Grid item xs={12} md={6}>
         <Card>
           <CardMedia

@@ -5,6 +5,7 @@ import GallerySection from './components/gallery/gallerySection'
 import PricingSection from './components/pricing/pricingSection'
 import AboutUsSection from './components/aboutUs/aboutUsSection'
 import FooterSection from './components/footer/footerSection'
+import SocialsSection from './components/socials/socialsSection'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <GallerySection />
       <PricingSection />
       <AboutUsSection />
+      <SocialsSection />
       <FooterSection />
     </>
   )
