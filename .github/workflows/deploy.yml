@@ -1,0 +1,52 @@
+name: pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install
+        run: pnpm i
+      - name: Build
+        run: pnpm build-storybook
+      - name: Upload your page as github pages artifact
+        uses: actions/upload-pages-artifact@main
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to pages branch
+        uses: actions/deploy-pages@v4
