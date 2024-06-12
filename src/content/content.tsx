@@ -20,16 +20,19 @@ export const content = {
                 serviceImage: "https://i0.wp.com/flylordsmag.com/wp-content/uploads/2019/05/Charleston-sc-redfish-flyfishing-lifestyle-photography-25.jpg?fit=6646%2C4431&quality=66&ssl=1",
                 serviceTitle: "Half Day - 6 hours",
                 content: "Join our experienced captain as we set sail for life on the high seas, boat leaves promptly around 6am and returns in time for a lunch at the local shellcracker inn and restaraunt",
+                price: "$400",
             },
             {
                 serviceImage: "https://flyfishingcharters.com/wp-content/uploads/Redfin-Fall2018-240.jpg",
                 serviceTitle: "Full Day - 10 hours",
                 content: "Join our experienced captain as we set sail for life on the high seas, boat leaves promptly around 6am and returns late afternoon just in time for the dinner bell at the shellcracker inn and restaraunt",
+                price: "$675",
             },
             {
                 serviceImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzIa1nXHexr2JMlgEcNIBwBAe-_qpJw4cSg&s",
                 serviceTitle: "Sunset Cruise -  3 hours",
                 content: "Join our experienced captain as we set sail for life on the high seas, boat leaves promptly around 6pm and returns in time for a drink at the lovely shellcracker inn and restaraunt",
+                price: "$325",
             }
         ]
     },
@@ -66,9 +69,9 @@ export const content = {
         subTitle: "A real lowcountry legend",
         aboutUsSectionBackgroundImage: "/path/to/aboutUsBackgroundImage.png",
         aboutUsImage: "https://beauoutfitters.com/cdn/shop/collections/Screenshot_2023-02-15_at_10.45.09_AM.png?v=1676476214&width=750",
-        contentSlot1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        contentSlot2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        contentSlot3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        contentSlot1: "Capt. Salty Mike is a father, waterman, self-taught fly fisherman, fly tier, and a dedicated fishing guide in the beautiful South Carolina low country. He was born and raised in Beaufort, South Carolina and has been fishing the Low Country his whole life. Growing up, he either worked hard with his dad as his right hand man or they went fishing. His dad's strong work ethic in construction taught him the value of hard work and giving everything 110% in life. Capt. Salty Mike has a deep passion for guiding, finding joy in seeing someone else succeed on the bow.",
+        contentSlot2: "He lives for those moments when the impossible happens, especially when it involves big Redfish or large fish in their natural habitat. His goal is to show clients the fish and make it as easy as possible for them to catch. While he enjoys having a good time and laughing with his clients, he is also a knowledgeable fisherman.",
+        contentSlot3: "Every time he sets foot on the water, he looks forward to the unknown and what it has in store. His ultimate aim is to create unforgettable memories and friendships while helping clients catch that big fish of a lifetime. With the abundance of guides available, No Local guides in Beaufort  have as much time on the water with as many Big Fly Tournament Wins as  Capt. Salty Mike.",
         
     },
     socialsSection: {

@@ -1,29 +1,59 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import { content } from "../../content/content"
 
 const NavigationBar: React.FC = () => {
   return (
     <AppBar position="static" sx={{ bgcolor: '#F6832A' }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ fontFamily: "'Press Start 2P', system-ui", color: "white", marginLeft: '205px' }}>
+        <Typography variant="h6" component="div" sx={{ fontFamily: "'Press Start 2P', system-ui", color: "white", marginLeft: '25rem' }}>
           {content.navigationBarSection.mainTitle}
         </Typography>
         <div> {/* Added a div to contain the buttons */}
-          <Button color="inherit" href="#home">Home</Button>
-          <Button color="inherit" href="#contact">Contact Us</Button>
-          <Button color="inherit" href="#pricing">Pricing</Button>
-          <Button color="inherit" href="#about">About Us</Button>
+          <Button
+            color="inherit"
+            href="#home"
+            sx={{
+              '&:hover': {
+                color: 'purple',
+              },
+            }}
+          >
+            Home
+          </Button>
+          <Button
+            color="inherit"
+            href="#contact"
+            sx={{
+              '&:hover': {
+                color: 'purple',
+              },
+            }}
+          >
+            Contact Us
+          </Button>
+          <Button
+            color="inherit"
+            href="#pricing"
+            sx={{
+              '&:hover': {
+                color: 'purple',
+              },
+            }}
+          >
+            Pricing
+          </Button>
+          <Button
+            color="inherit"
+            href="#about"
+            sx={{
+              '&:hover': {
+                color: 'purple',
+              },
+            }}
+          >
+            About Us
+          </Button>
         </div>
       </Toolbar>
     </AppBar>
