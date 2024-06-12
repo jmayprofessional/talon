@@ -16,27 +16,25 @@ const HeroSection: React.FC = () => {
         justifyContent: "center",
         color: "white",
         textAlign: "center",
-        pb: 6 // Add padding bottom
+        pb: 6
       }}
     >
       <Container>
         <Typography 
           variant="h2" 
           gutterBottom 
-          sx={{ fontFamily: "'Press Start 2P', system-ui", color: "purple" }}
+          sx={{ fontFamily: "'Press Start 2P', system-ui", color: "#2D2C23", boxShadow: '20' }}
         >
           {content.heroSection.mainTitle}
         </Typography>
         <Typography 
           variant="h4" 
           gutterBottom 
-          sx={{ fontFamily: "'ABeeZee', sans-serif" }}
+          sx={{ fontFamily: "'ABeeZee', sans-serif", color: "purple" }}
         >
           {content.heroSection.subTitle}
         </Typography>
-        <Button variant="contained" color="primary" href="#pricing">
-          Book Your Trip NOW!
-        </Button>
+        <Button color="inherit" href={`tel:${content.footerSection.phoneNumber}`}>Book Your Trip NOW!</Button>
       </Container>
     </Box>
   );
