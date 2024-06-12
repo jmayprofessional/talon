@@ -10,7 +10,7 @@ const SocialsSection = () => {
         backgroundImage: `url(${content.socialsSection.socialsSectionBackgroundImage})`,
         height: '12rem',
         marginBottom: '60px',
-        textAlign: 'center', // Center the content
+        textAlign: 'center', 
         padding: '20px',
         color: '#2D2C23',
       }}
