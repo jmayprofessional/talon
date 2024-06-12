@@ -77,10 +77,8 @@ export const content = {
     socialsSection: {
         mainTitle: "Stay Fishy - Follow Along On Our Socials",
         socialsSectionBackgroundImage: "https://tailwatersflyfishing.com/cdn/shop/collections/S23-CostaRica-87.jpg?v=1679923764",
-        faceBookLogo: "",
-        facebookLink: "",
-        instagramLogo: "",
-        instaGramLink: "",
+        facebookLink: "https://www.facebook.com/nicholas.j.boyd",
+        instaGramLink: "https://www.instagram.com/capt.nicholasboyd/",
     },  
     footerSection: {
       googleMapsLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.9682665265145!2d-79.87939642464207!3d32.79310068316443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe70fd2482ae03%3A0x8aee1e44f8c2d3e1!2sShem%20Creek%20Boat%20Landing!5e0!3m2!1sen!2sus!4v1718131035545!5m2!1sen!2sus",

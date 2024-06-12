@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
-import { content } from "../../content/content"
+import { content } from "../../content/content";
 
 const NavigationBar: React.FC = () => {
   return (
@@ -9,29 +9,7 @@ const NavigationBar: React.FC = () => {
         <Typography variant="h6" component="div" sx={{ fontFamily: "'Press Start 2P', system-ui", color: "white", marginLeft: '25rem' }}>
           {content.navigationBarSection.mainTitle}
         </Typography>
-        <div> {/* Added a div to contain the buttons */}
-          <Button
-            color="inherit"
-            href="#home"
-            sx={{
-              '&:hover': {
-                color: 'purple',
-              },
-            }}
-          >
-            Home
-          </Button>
-          <Button
-            color="inherit"
-            href="#contact"
-            sx={{
-              '&:hover': {
-                color: 'purple',
-              },
-            }}
-          >
-            Contact Us
-          </Button>
+        <div>
           <Button
             color="inherit"
             href="#pricing"
@@ -41,7 +19,7 @@ const NavigationBar: React.FC = () => {
               },
             }}
           >
-            Pricing
+            Trip Pricing
           </Button>
           <Button
             color="inherit"
@@ -53,6 +31,17 @@ const NavigationBar: React.FC = () => {
             }}
           >
             About Us
+          </Button>
+          <Button
+            color="inherit"
+            href="#contact"
+            sx={{
+              '&:hover': {
+                color: 'purple',
+              },
+            }}
+          >
+            Book Your Trip
           </Button>
         </div>
       </Toolbar>
