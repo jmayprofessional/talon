@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
 import { content } from "../../content/content";
-import '@fontsource/press-start-2p';  // Ensure this is imported
+import '@fontsource/press-start-2p'; 
 
 const HeroSection: React.FC = () => {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
           gutterBottom 
           sx={{ 
             fontFamily: "'ABeeZee', sans-serif", 
-            color: isButtonHovered ? "orange" : "purple"  // Change text color based on button hover
+            color: isButtonHovered ? "orange" : "purple"  
           }}
         >
           {content.heroSection.subTitle}
@@ -42,11 +42,11 @@ const HeroSection: React.FC = () => {
         <Button 
           color="inherit" 
           sx={{
-            fontSize: '1.5rem',  // Adjust this value as needed
-            padding: '0.5rem 1rem', // Optional: Adds some padding around the button
-            backgroundColor: isButtonHovered ? 'purple' : '#F6832A',  // Change background color based on hover state
+            fontSize: '1.5rem',  
+            padding: '0.5rem 1rem', 
+            backgroundColor: isButtonHovered ? 'purple' : '#F6832A',  
             '&:hover': {
-              backgroundColor: 'purple', // Change background color on hover
+              backgroundColor: 'purple', 
             },
           }}
           onMouseEnter={() => setIsButtonHovered(true)}
