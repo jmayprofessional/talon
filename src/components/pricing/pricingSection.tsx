@@ -66,7 +66,7 @@ const PricingCard: React.FC<{ service: any }> = ({ service }) => {
             bottom: 0,
             left: 0,
             right: 0,
-            backgroundColor: "rgba(246, 131, 42, 0.8)",
+            backgroundColor: "rgba(246, 131, 42, 0.8)", // orange crush transparent
             color: "white",
             display: "flex",
             alignItems: "center",

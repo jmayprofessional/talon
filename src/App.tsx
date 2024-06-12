@@ -23,7 +23,7 @@ function App() {
       <Box id="about">
       <AboutUsSection />
       </Box>
-      <Box id="pricing">
+      <Box id="contact">
       <SocialsSection />
       </Box>
       <FooterSection />
