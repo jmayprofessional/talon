@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
-import { content } from "../../content/content";
+import { content } from "../../content/content"; // Ensure this content is optimized for multiple items
 
 const PricingSection: React.FC = () => {
   return (
@@ -11,8 +11,8 @@ const PricingSection: React.FC = () => {
         backgroundPosition: "center",
         minHeight: "600px",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
         color: "white",
         textAlign: "center",
         padding: "50px",
@@ -20,7 +20,7 @@ const PricingSection: React.FC = () => {
     >
       <Grid container spacing={2}>
         {content.pricingSection.services.map((service, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4}>
+          <Grid item key={index} xs={12} sm={6} md={3}>
             <PricingCard service={service} />
           </Grid>
         ))}
@@ -42,16 +42,17 @@ const PricingCard: React.FC<{ service: any }> = ({ service }) => {
         "&:hover": {
           transform: "scale(1.05)",
         },
+        height: 300, // Adjust height for smaller cards
       }}
     >
       <CardMedia
         component="img"
-        height="200"
+        height="140"
         image={service.serviceImage}
         alt={service.serviceTitle}
       />
       <CardContent sx={{ position: 'relative', zIndex: 1 }}>
-        <Typography variant="h5" component="div" gutterBottom>
+        <Typography variant="h6" component="div" gutterBottom>
           {service.serviceTitle}
         </Typography>
         <Typography variant="body2" color="textSecondary">
@@ -62,11 +63,11 @@ const PricingCard: React.FC<{ service: any }> = ({ service }) => {
         <Box
           sx={{
             position: "absolute",
-            top: 200, 
+            top: 140, 
             bottom: 0,
             left: 0,
             right: 0,
-            backgroundColor: "rgba(246, 131, 42, 0.8)", // orange crush transparent
+            backgroundColor: "rgba(246, 131, 42, 0.8)",
             color: "white",
             display: "flex",
             alignItems: "center",
@@ -74,7 +75,7 @@ const PricingCard: React.FC<{ service: any }> = ({ service }) => {
             zIndex: 2,
           }}
         >
-          <Typography variant="h6" sx={{ fontSize: '4rem' }}>{service.price}</Typography>
+          <Typography variant="h6" sx={{ fontSize: '2rem' }}>{service.price}</Typography>
         </Box>
       )}
     </Card>

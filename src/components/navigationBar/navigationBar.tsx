@@ -4,44 +4,44 @@ import { content } from "../../content/content";
 
 const NavigationBar: React.FC = () => {
   return (
-    <AppBar position="static" sx={{ bgcolor: '#F6832A' }}>
+    <AppBar position="static" sx={{ bgcolor: content.navigationBarSection.navBarBackgroundColor }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" component="div" sx={{ fontFamily: "'Press Start 2P', system-ui", color: "white", marginLeft: '25rem' }}>
           {content.navigationBarSection.mainTitle}
         </Typography>
         <div>
           <Button
-            color="inherit"
-            href="#pricing"
+            href="#pill1"
             sx={{
+              color: content.navigationBarSection.pillFontColor,
               '&:hover': {
-                color: 'purple',
+                color: `${content.navigationBarSection.pillOnHoverColor}`,
               },
             }}
           >
-            Trip Pricing
+            {content.navigationBarSection.pill1}
           </Button>
           <Button
-            color="inherit"
-            href="#about"
+            href="#pill2"
             sx={{
+              color: content.navigationBarSection.pillFontColor,
               '&:hover': {
-                color: 'purple',
+                color: `${content.navigationBarSection.pillOnHoverColor}`,
               },
             }}
           >
-            About Us
+            {content.navigationBarSection.pill2}
           </Button>
           <Button
-            color="inherit"
-            href="#contact"
+            href="#pill3"
             sx={{
+              color: content.navigationBarSection.pillFontColor,
               '&:hover': {
-                color: 'purple',
+                color: `${content.navigationBarSection.pillOnHoverColor}`,
               },
             }}
           >
-            Book Your Trip
+            {content.navigationBarSection.pill3}
           </Button>
         </div>
       </Toolbar>

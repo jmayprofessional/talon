@@ -5,8 +5,8 @@ import { content } from "../../content/content";
 const GallerySection: React.FC = () => {
   return (
     <Box sx={{ pb: 6 }}>
-      <Typography variant="h4" align="center" gutterBottom sx={{ fontFamily: "'ABeeZee', sans-serif", pt: 4, color: "#2D2C23"}}>
-        Photo Gallery of Dreams
+      <Typography variant="h4" align="center" gutterBottom sx={{ fontFamily: `${content.gallerySection.galleryTitleFontStyle}`, pt: 4, color: `${content.gallerySection.galleryTitleFontColor}`}}>
+        {content.gallerySection.galleryTitle}
       </Typography>
       <Grid container spacing={2}>
         {content.gallerySection.gallery.map((item, index) => (
@@ -26,13 +26,13 @@ const GalleryImage: React.FC<{ item: any }> = ({ item }) => {
         transition: "transform 0.3s, box-shadow 0.3s",
         "&:hover": {
           transform: "scale(1.05)",
-          boxShadow: "0 4px 8px rgba(246, 131, 42, 0.8)", // Purple shadow
+          boxShadow: `${content.gallerySection.galleryImageBoxShadowColor}`, 
         },
       }}
     >
       <CardMedia
         component="img"
-        height="200"
+        height={`${content.gallerySection.galleryImageHeight}`}
         image={item.galleryImage}
         alt={item.caption}
       />
